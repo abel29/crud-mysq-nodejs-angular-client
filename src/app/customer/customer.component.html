@@ -1,0 +1,26 @@
+<h5>All Customers</h5>
+<div *ngFor="let cust of customers">
+  <a [routerLink]="['/customers', cust.id]" style="color:black"><span class="badge badge-dark">{{cust.id}}</span> -> {{ cust.firstname }}</a>
+</div>
+<div class="col-md-12">
+  <table class="table table-striped">
+     <thead>
+       <th>Id</th>
+       <th>Nombre</th>
+       <th>Apellido</th>
+       <th>Edad</th>  
+       <th>fecha Registro</th> 
+       <th>fecha Actualizacion</th>
+     </thead>
+     <tbody>
+       <tr *ngFor="let item of customers">
+          <td>{{item.id}}</td>
+          <td>{{item.firstname}}</td>
+          <td>{{item.lastname}}</td>
+          <td>{{item.age}}</td>
+          <td>{{item.createdAt}}</td>
+          <td>{{item.updatedAt}}</td>
+       </tr>
+     </tbody>
+  </table>
+</div>
